@@ -20,7 +20,7 @@
 
         $('.link').text('123');
 
-        var newDiv=$('div');
+        var newDiv=$('<div>');
         newDiv.text('New link');
         newDiv.insertBefore(".post");
     });
