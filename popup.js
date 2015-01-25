@@ -18,12 +18,15 @@ var main = function () {
 
     $('#addLink').click(function () {
 
-        $('.link').text('123');
-
         var newDiv = $('<div>');
         newDiv.text('New link');
         newDiv.addClass("post")
         newDiv.insertBefore(".post:first");
+		var newA = $('<a>');
+		newA.addClass("del");
+		newA.text('Удалить');
+		newDiv.append.child(newA);
+		
     });
 
 }
