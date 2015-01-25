@@ -1,11 +1,11 @@
 var main = function() {
 
 	var hoverIn=function(e){
-	this.find('.del').show();
+	$(this).find('.del').show();
 	}
 
 	var hoverOut=function(e){
-	this.find('.del').hide();
+	$(this).find('.del').hide();
 	}
 
 	$('.post').hover(hoverIn,hoverOut);
@@ -15,4 +15,3 @@ var main = function() {
 }
 
 $(main);
-1111
