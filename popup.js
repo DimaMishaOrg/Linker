@@ -10,15 +10,15 @@ var main = function () {
 
     //$('.post').hover(hoverIn, hoverOut);
 
-    $('body').on('mouseenter','.post',hoverIn);
+    $('#posts').on('mouseenter','.post',hoverIn);
 
-    $('body').on('mouseleave','.post',hoverOut);
+    $('#posts').on('mouseleave','.post',hoverOut);
 
     /*Deletion*/
-    var delet = function () {
+    var del = function () {
         $(this).parent().remove();
     };
-	$('body').on('click','.del',delet);
+	$('#posts').on('click','.del',del);
 	
 
     $('#addLink').click(function () {
@@ -26,7 +26,8 @@ var main = function () {
         var newDiv = $('<div>');
         newDiv.text('New link');
         newDiv.addClass("post");
-        newDiv.insertBefore(".post:first");
+        $('#posts').prepend(newDiv)
+       // newDiv.insertBefore(".post:first");
 		var newA = $('<a>');
 		newA.addClass("del");
 		newA.text('Удалить');
