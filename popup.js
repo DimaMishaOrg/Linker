@@ -1,4 +1,5 @@
-﻿﻿var main = function () {
+﻿﻿﻿
+var main = function () {
 
     var hoverIn = function (e) {
         $(this).find('.del').show();
@@ -15,23 +16,15 @@
         $(this).parent().remove();
     });
 
-    /*Adding*/
     $('#addLink').click(function () {
-/*Addоооing*/
-        $('.link').text('123');
-<<<<<<< HEAD
 
-        //TEST
-/*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*/
-=======
-/*Addоооing*/
->>>>>>> origin/master
-        var newDiv=$('<div>');
+        $('.link').text('123');
+
+        var newDiv = $('<div>');
         newDiv.text('New link');
         newDiv.addClass("post")
         newDiv.insertBefore(".post:first");
     });
 
 }
-
 $(main);
