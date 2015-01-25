@@ -35,8 +35,7 @@ a {
 	margin-right: 0px;
 }
 .del {
-	position:absolute;
-	left: 250px;
+	float:right;
 	display: none;
 }
 

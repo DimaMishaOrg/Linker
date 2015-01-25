@@ -10,7 +10,15 @@ var main = function() {
 
 	$('.post').hover(hoverIn,hoverOut);
 
-
+	/*Deletion*/
+	$('.del').click(function() {
+	$(this).parent().remove();
+	});
+	
+	/*Adding*/
+	$('.addLink').click(function() {
+	$('.link').text('123');
+	});
 
 }
 
