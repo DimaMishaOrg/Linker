@@ -1,4 +1,4 @@
-﻿var main = function () {
+﻿﻿var main = function () {
 
     var hoverIn = function (e) {
         $(this).find('.del').show();
@@ -19,8 +19,13 @@
     $('#addLink').click(function () {
 /*Addоооing*/
         $('.link').text('123');
+<<<<<<< HEAD
 
-
+        //TEST
+/*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*//*Addоооing*/
+=======
+/*Addоооing*/
+>>>>>>> origin/master
         var newDiv=$('<div>');
         newDiv.text('New link');
         newDiv.addClass("post")
