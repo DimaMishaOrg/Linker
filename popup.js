@@ -15,9 +15,11 @@
     $('body').on('mouseleave','.post',hoverOut);
 
     /*Deletion*/
-    $('.del').click(function () {
+    var delet = function () {
         $(this).parent().remove();
-    });
+    };
+	$('body').on('click','.del',delet);
+	
 
     $('#addLink').click(function () {
 
@@ -29,7 +31,7 @@
 		newA.addClass("del");
 		newA.text('Удалить');
 		newDiv.append(newA);
-		
+		newA.attr({href:"#"});
     });
 
 }
