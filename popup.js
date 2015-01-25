@@ -10,23 +10,25 @@ var main = function () {
 
     //$('.post').hover(hoverIn, hoverOut);
 
-    $('#posts').on('mouseenter','.post',hoverIn);
+    var posts= $('#posts')
 
-    $('#posts').on('mouseleave','.post',hoverOut);
+    posts.on('mouseenter','.post',hoverIn);
+
+    posts.on('mouseleave','.post',hoverOut);
 
     /*Deletion*/
     var del = function () {
         $(this).parent().remove();
     };
-	$('#posts').on('click','.del',del);
+    posts.on('click','.del',del);
 	
 
     $('#addLink').click(function () {
 
         var newDiv = $('<div>');
-        newDiv.text('New link');
+        newDiv.text(getCuurentUrl());
         newDiv.addClass("post");
-        $('#posts').prepend(newDiv)
+        posts.prepend(newDiv)
        // newDiv.insertBefore(".post:first");
 		var newA = $('<a>');
 		newA.addClass("del");
@@ -34,6 +36,11 @@ var main = function () {
 		newDiv.append(newA);
 		newA.attr({href:"#"});
     });
+
+    function getCuurentUrl(){
+        //todo получение текущего адреса
+        return 'New link';
+    }
 
 }
 $(main);
