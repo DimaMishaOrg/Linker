@@ -10,7 +10,7 @@ var main = function () {
 
     //$('.post').hover(hoverIn, hoverOut);
 
-    var posts = $('#posts')
+    var posts = $('#posts');
 
     posts.on('mouseenter', '.post', hoverIn);
 
@@ -28,7 +28,7 @@ var main = function () {
         var newDiv = $('<div>');
         newDiv.text(getCuurentUrl());
         newDiv.addClass("post");
-        posts.prepend(newDiv)
+        posts.prepend(newDiv);
         // newDiv.insertBefore(".post:first");
         var newA = $('<a>');
         newA.addClass("del");
@@ -42,5 +42,5 @@ var main = function () {
         return 'New link';
     }
 
-}
+};
 $(main);
