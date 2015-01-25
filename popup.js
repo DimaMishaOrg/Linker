@@ -10,18 +10,18 @@ var main = function () {
 
     //$('.post').hover(hoverIn, hoverOut);
 
-    var posts= $('#posts')
+    var posts = $('#posts')
 
-    posts.on('mouseenter','.post',hoverIn);
+    posts.on('mouseenter', '.post', hoverIn);
 
-    posts.on('mouseleave','.post',hoverOut);
+    posts.on('mouseleave', '.post', hoverOut);
 
     /*Deletion*/
     var del = function () {
         $(this).parent().remove();
     };
-    posts.on('click','.del',del);
-	
+    posts.on('click', '.del', del);
+
 
     $('#addLink').click(function () {
 
@@ -29,15 +29,15 @@ var main = function () {
         newDiv.text(getCuurentUrl());
         newDiv.addClass("post");
         posts.prepend(newDiv)
-       // newDiv.insertBefore(".post:first");
-		var newA = $('<a>');
-		newA.addClass("del");
-		newA.text('Удалить');
-		newDiv.append(newA);
-		newA.attr({href:"#"});
+        // newDiv.insertBefore(".post:first");
+        var newA = $('<a>');
+        newA.addClass("del");
+        newA.text('Удалить');
+        newDiv.append(newA);
+        newA.attr({href: "#"});
     });
 
-    function getCuurentUrl(){
+    function getCuurentUrl() {
         //todo получение текущего адреса
         return 'New link';
     }
