@@ -19,13 +19,8 @@
     $('#addLink').click(function () {
 /*Addоооing*/
         $('.link').text('123');
-<<<<<<< HEAD
 
-        //TEST
 
-=======
-/*Addоооing*/
->>>>>>> origin/master
         var newDiv=$('<div>');
         newDiv.text('New link');
         newDiv.addClass("post")
