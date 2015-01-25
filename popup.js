@@ -1,4 +1,4 @@
-﻿var main = function () {
+var main = function () {
 
     var hoverIn = function (e) {
         $(this).find('.del').show();
