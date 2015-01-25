@@ -1,24 +1,24 @@
-﻿var main = function() {
+﻿var main = function () {
 
-	var hoverIn=function(e){
-	$(this).find('.del').show();
-	}
+    var hoverIn = function (e) {
+        $(this).find('.del').show();
+    }
 
-	var hoverOut=function(e){
-	$(this).find('.del').hide();
-	}
+    var hoverOut = function (e) {
+        $(this).find('.del').hide();
+    }
 
-	$('.post').hover(hoverIn,hoverOut);
+    $('.post').hover(hoverIn, hoverOut);
 
-	/*Deletion*/
-	$('.del').click(function() {
-	$(this).parent().remove();
-	});
-	
-	/*Adding*/
-	$('.addLink').click(function() {
-	$('.link').text('123');
-	});
+    /*Deletion*/
+    $('.del').click(function () {
+        $(this).parent().remove();
+    });
+
+    /*Adding*/
+    $('.addLink').click(function () {
+        $('.link').text('123');
+    });
 
 }
 
