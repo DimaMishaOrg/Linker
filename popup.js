@@ -20,6 +20,8 @@
 
         $('.link').text('123');
 
+        //TEST
+
         var newDiv=$('<div>');
         newDiv.text('New link');
         newDiv.addClass("post")
