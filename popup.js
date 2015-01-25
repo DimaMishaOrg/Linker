@@ -16,13 +16,14 @@
     });
 
     /*Adding*/
-    $('.addLink').click(function () {
+    $('#addLink').click(function () {
 
         $('.link').text('123');
 
         var newDiv=$('<div>');
         newDiv.text('New link');
-        newDiv.insertBefore(".post");
+        newDiv.addClass("post")
+        newDiv.insertBefore(".post:first");
     });
 
 }
