@@ -7,26 +7,22 @@ var main = function () {
     var hoverOut = function (e) {
         $(this).find('.del').hide();
     };
-	//принудительные установщики registred
-	var regT = function () {
-		chrome.storage.local.set({
-		registered: true
-		})
-	}
-	var regF = function () {
-		chrome.storage.local.set({
-		registered: false
-		})
-	}
-	
-	$('#regTrue').click(regT);
-	$('#regFalse').click(regF);
-	
-	
-	
-	
-	
-	
+    //принудительные установщики registred
+    var regT = function () {
+        chrome.storage.local.set({
+            registered: true
+        })
+    }
+    var regF = function () {
+        chrome.storage.local.set({
+            registered: false
+        })
+    }
+
+    $('#regTrue').click(regT);
+    $('#regFalse').click(regF);
+
+
     //$('.post').hover(hoverIn, hoverOut);
 
     var posts = $('#posts');
@@ -52,7 +48,7 @@ var main = function () {
             // newDiv.insertBefore(".post:first");
             var newA = $('<a>');
             newA.addClass("del");
-			newA.addClass("hidden");
+            newA.addClass("hidden");
             newA.text('Удалить');
             newDiv.append(newA);
             newA.attr({href: "#"});
@@ -71,34 +67,33 @@ var main = function () {
         );
 
     }
-	/*getstoragevalues*/
-	
-	
-	
-	
-	function getIsRegistered(callback) {
-		chrome.storage.local.get("registered", function (items) {
-		callback(items.registered === true);
-		})
-		
-	}
-	
-	
-function updateView(isRegistered)	{
 
-	if (isRegistered){
-	 $('#main').show();
-	 $('#popup').hide();
-	}
-	else {
-	$('#popup').show();
-	$('#main').hide();
-	}
-		
+    /*getstoragevalues*/
 
-}
-	
-getIsRegistered(updateView);
-	
+
+    function getIsRegistered(callback) {
+        chrome.storage.local.get("registered", function (items) {
+            callback(items.registered === true);
+        })
+
+    }
+
+
+    function updateView(isRegistered) {
+
+        if (isRegistered) {
+            $('#main').show();
+            $('#popup').hide();
+        }
+        else {
+            $('#popup').show();
+            $('#main').hide();
+        }
+
+
+    }
+
+    getIsRegistered(updateView);
+
 };
 $(main);
