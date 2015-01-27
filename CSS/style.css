@@ -40,6 +40,7 @@ a {
     padding: 5px; /* Поля вокруг текста */
     text-overflow: ellipsis; /* Добавляем многоточие */
 	width: 200px;
+	display: inline-block;
 }
 
 .del {
