@@ -25,21 +25,29 @@ var main = function () {
 
     $('#addLink').click(function () {
 
-        var newDiv = $('<div>');
-        newDiv.text(getCurentUrl());
-        newDiv.addClass("post");
-        posts.prepend(newDiv);
-        // newDiv.insertBefore(".post:first");
-        var newA = $('<a>');
-        newA.addClass("del");
-        newA.text('Удалить');
-        newDiv.append(newA);
-        newA.attr({href: "#"});
+        getCurrentUrl(function(url){
+			var newDiv = $('<div>');
+	        newDiv.text(url);
+	        newDiv.addClass("post");
+	        posts.prepend(newDiv);
+	        // newDiv.insertBefore(".post:first");
+	        var newA = $('<a>');
+	        newA.addClass("del");
+	        newA.text('Удалить');
+	        newDiv.append(newA);
+	        newA.attr({href: "#"});
+		
+		})
     });
 
-    function getCurentUrl() {
-        //todo получение текущего адреса
-        return 'New link';
+    function getCurrentUrl(callback) {
+			
+			chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
+				function(tabs){
+				callback = tabs[0].url;
+				}
+			);
+        
     }
 
 };
