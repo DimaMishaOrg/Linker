@@ -7,7 +7,26 @@ var main = function () {
     var hoverOut = function (e) {
         $(this).find('.del').hide();
     };
-
+	//принудительные установщики registred
+	var regT = function () {
+		chrome.storage.local.set({
+		registered: true
+		})
+	}
+	var regF = function () {
+		chrome.storage.local.set({
+		registered: false
+		})
+	}
+	
+	$('#regTrue').click(regT);
+	$('#regFalse').click(regF);
+	
+	
+	
+	
+	
+	
     //$('.post').hover(hoverIn, hoverOut);
 
     var posts = $('#posts');
@@ -59,7 +78,7 @@ var main = function () {
 	
 	function getIsRegistered(callback) {
 		chrome.storage.local.get("registered", function (items) {
-		callback(items.registered === True);
+		callback(items.registered === true);
 		})
 		
 	}
