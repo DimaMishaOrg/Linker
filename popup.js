@@ -26,7 +26,7 @@ var main = function () {
     $('#addLink').click(function () {
 
         var newDiv = $('<div>');
-        newDiv.text(getCuurentUrl());
+        newDiv.text(getCurentUrl());
         newDiv.addClass("post");
         posts.prepend(newDiv);
         // newDiv.insertBefore(".post:first");
@@ -37,7 +37,7 @@ var main = function () {
         newA.attr({href: "#"});
     });
 
-    function getCuurentUrl() {
+    function getCurentUrl() {
         //todo получение текущего адреса
         return 'New link';
     }
