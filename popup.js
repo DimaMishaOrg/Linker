@@ -25,9 +25,9 @@ var main = function () {
 
     $('#addLink').click(function () {
 
-        getCurrentUrl(function (url) {
+        var addLink = function (currentUrl) {
             var newDiv = $('<div>');
-            newDiv.text(url);
+            newDiv.text(currentUrl);
             newDiv.addClass("post");
             posts.prepend(newDiv);
             // newDiv.insertBefore(".post:first");
@@ -37,14 +37,16 @@ var main = function () {
             newDiv.append(newA);
             newA.attr({href: "#"});
 
-        })
+        }
+
+        getCurrentUrl(addLink);
     });
 
     function getCurrentUrl(callback) {
 
         chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
             function (tabs) {
-                callback = tabs[0].url;
+                callback(tabs[0].url);
             }
         );
 
