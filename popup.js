@@ -33,6 +33,7 @@ var main = function () {
             // newDiv.insertBefore(".post:first");
             var newA = $('<a>');
             newA.addClass("del");
+			newA.addClass("hidden");
             newA.text('Удалить');
             newDiv.append(newA);
             newA.attr({href: "#"});
@@ -51,6 +52,34 @@ var main = function () {
         );
 
     }
+	/*getstoragevalues*/
+	
+	
+	
+	
+	function getIsRegistered(callback) {
+		chrome.storage.local.get("registered", function (items) {
+		callback(items.registered === True);
+		})
+		
+	}
+	
+	
+function updateView(isRegistered)	{
 
+	if (isRegistered){
+	 $('#main').show();
+	 $('#popup').hide();
+	}
+	else {
+	$('#popup').show();
+	$('#main').hide();
+	}
+		
+
+}
+	
+getIsRegistered(updateView);
+	
 };
 $(main);

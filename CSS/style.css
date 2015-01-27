@@ -36,7 +36,9 @@ a {
 
 .del {
     float: right;
-    display: none;
+}
+.hidden {
+	display: none;
 }
 
   
