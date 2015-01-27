@@ -9,7 +9,7 @@
   },
   "permissions": [
     "activeTab",
-	"tabs",
+    "tabs",
     "https://ajax.googleapis.com/"
   ]
 }
