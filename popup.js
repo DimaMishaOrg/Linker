@@ -42,10 +42,13 @@ var main = function () {
 
         var addLink = function (currentUrl) {
             var newDiv = $('<div>');
-            newDiv.text(currentUrl);
             newDiv.addClass("post");
             posts.prepend(newDiv);
             // newDiv.insertBefore(".post:first");
+			var link = $('<a>');
+            link.addClass("link");
+            link.text(currentUrl);
+            newDiv.append(link);
             var newA = $('<a>');
             newA.addClass("del");
             newA.addClass("hidden");

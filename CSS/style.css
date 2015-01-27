@@ -34,6 +34,14 @@ a {
     margin-right: 0px;
 }
 
+.link {
+	white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    padding: 5px; /* Поля вокруг текста */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+	width: 200px;
+}
+
 .del {
     float: right;
 }
